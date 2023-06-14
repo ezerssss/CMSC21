@@ -53,9 +53,10 @@ void solveMidpoint(struct line* line1){
     // (y1 + y2) / 2
     float y = (line1->point1.y + line1->point2.y) / 2;
 
+    float midpoints[2] = {x, y};
+
     // store directly to main variable
-    line1->midpoint[0] = x;
-    line1->midpoint[1] = y;
+    line1->midpoint = midpoints;
 }
 
 float squaredMinus(float a, float b) {
